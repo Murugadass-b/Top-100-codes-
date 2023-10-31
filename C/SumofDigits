@@ -1,0 +1,20 @@
+#include<stdio.h>
+int findSum(int n){
+    if(n==0){
+        return 0;
+    }else{
+        int dig = n%10;
+        return dig+ findSum(n/10);
+    }
+}
+void main(){
+    int num,sum=0;
+    scanf("%d",&num);
+    // while(num>0){
+    //     int dig = num%10;
+    //     sum+=dig;
+    //     num/=10;
+    // }
+    // printf("%d",sum);
+    printf("%d",findSum(num));
+}
